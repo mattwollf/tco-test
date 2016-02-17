@@ -1,7 +1,7 @@
 # tail call test Makefile
 # written by mwolf
 
-ROOT=recurs
+ROOT=recursive_fib
 SRC= $(ROOT:=.c)
 
 OBJS= $(addsuffix _$(ROOT:=.o), $(OLVLS))
