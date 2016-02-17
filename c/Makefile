@@ -3,14 +3,16 @@
 
 include Makefile.inc
 
+SUBDIRS= iterative recursive tco recursive_fib iterative_fib tco_fib
+
 .PHONY: all
 all:
-	cd iterative; make
-	cd recursive; make
-	cd tco; make
+	for dir in $(SUBDIRS) ; do \
+		cd $$dir ; make ; cd .. ; \
+	done
 
 .PHONY: clean
 clean:
-	cd iterative; make clean
-	cd recursive; make clean
-	cd tco; make clean
+	for dir in $(SUBDIRS) ; do \
+		cd $$dir ; make clean ; cd .. ; \
+	done
