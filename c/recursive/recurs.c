@@ -1,4 +1,7 @@
 #include <globals.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 int recurs(int x)
 {
 	if(x == 0)
@@ -7,9 +10,12 @@ int recurs(int x)
 	return x + recurs(x-1);
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	recurs(500);
+	if(argc < 2)
+		return -1;
+
+	printf("%d\n", recurs(atoi(argv[1])));
 
 	return 0;
 }

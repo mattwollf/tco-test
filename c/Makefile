@@ -6,13 +6,14 @@ include Makefile.inc
 SUBDIRS= iterative recursive tco recursive_fib iterative_fib tco_fib
 
 .PHONY: all
-all:
-	for dir in $(SUBDIRS) ; do \
-		cd $$dir ; make ; cd .. ; \
-	done
+all: $(SUBDIRS)
+
+.PHONY: $(SUBDIRS)
+$(SUBDIRS):
+	make -C $@
 
 .PHONY: clean
 clean:
 	for dir in $(SUBDIRS) ; do \
-		cd $$dir ; make clean ; cd .. ; \
+		make -C $$dir clean ; \
 	done

@@ -1,5 +1,8 @@
 #include <globals.h>
 
+#include <stdio.h>
+#include <stdlib.h>
+
 int iter(const int x)
 {
 	int sum = 0;
@@ -12,9 +15,9 @@ int iter(const int x)
 	return sum;
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	iter(INPUT);
+	printf("%d\n", iter(atoi(argv[1])));
 
 	return 0;
 }
