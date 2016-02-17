@@ -1,3 +1,4 @@
+#include <globals.h>
 int helper(const int x, const int sum);
 
 int tco(const int x)
@@ -15,7 +16,7 @@ int helper(const int x, const int sum)
 
 int main(void)
 {
-	tco(5);
+	tco(INPUT);
 
 	return 0;
 }

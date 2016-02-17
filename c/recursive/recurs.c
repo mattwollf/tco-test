@@ -1,3 +1,4 @@
+#include <globals.h>
 int recurs(int x)
 {
 	if(x == 0)
@@ -8,7 +9,7 @@ int recurs(int x)
 
 int main(void)
 {
-	recurs(5);
+	recurs(500);
 
 	return 0;
 }

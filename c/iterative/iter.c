@@ -1,3 +1,5 @@
+#include <globals.h>
+
 int iter(const int x)
 {
 	int sum = 0;
@@ -12,7 +14,7 @@ int iter(const int x)
 
 int main(void)
 {
-	iter(5);
+	iter(INPUT);
 
 	return 0;
 }
