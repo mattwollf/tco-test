@@ -6,9 +6,6 @@ int helper(const int n1, const int n2, const int count);
 
 int tco(const int x)
 {
-	if(x == 0)
-		return 0;
-
 	return helper(1, 0, x);
 }
 
