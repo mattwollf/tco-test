@@ -1,4 +1,7 @@
 #include <globals.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 int helper(const int x, const int sum);
 
 int tco(const int x)
@@ -14,9 +17,12 @@ int helper(const int x, const int sum)
 	return helper(x-1, sum+x);
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	tco(INPUT);
+	if(argc < 2)
+		return -1;
+
+	printf("%d\n", tco(atoi(argv[1])));
 
 	return 0;
 }
