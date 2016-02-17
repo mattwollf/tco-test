@@ -4,19 +4,18 @@
 
 int fib( int x)
 {
-	if( x < 2)
-		return x;
-
 	int n1 = 1;
 	int n2 = 0;
+	int tmp;
 
 	while( x --> 0)
 	{
+		tmp = n1;
 		n1 = n1 + n2;
-		n2 = n1;
+		n2 = tmp;
 	}
 
-	return n1;
+	return n2;
 }
 
 int main(int argc, char *argv[])
