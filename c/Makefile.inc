@@ -4,9 +4,10 @@
 export
 CC=gcc
 RM= rm -f
+STD=-std=c11
 
-CFLAGS= -g -pedantic $(WARNINGS) -march=native 
-SFLAGS= -S -pedantic $(WARNINGS) -march=native
+CFLAGS= -g $(STD) -pedantic $(WARNINGS) -march=native 
+SFLAGS= -S $(STD) -pedantic $(WARNINGS) -march=native
 
 OLVLS= O3 O2 O1 Os
 
